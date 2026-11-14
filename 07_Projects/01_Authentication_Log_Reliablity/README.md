@@ -2,8 +2,7 @@
 
 **Project ID:** CN-001  
 **Discipline:** Defensive Security, Digital Forensics, Security Automation  
-**Status:** Research and design
-
+**Status:** Research, development, and testing
 ## 1. Project Overview
 
 This project investigates how variations, inconsistencies, and potential manipulation of Linux authentication logs affect security detection and forensic analysis.
@@ -70,7 +69,36 @@ The project will progress through controlled stages:
 
 All experiments will use synthetic data or authorised laboratory environments.
 
-## 6. Evaluation Criteria
+## 6. Initial Technical Implementation
+
+Two initial Python scripts have been developed:
+
+### Timestamp Analysis (`timestamp_analysis.py`)
+
+- Parses ISO 8601 timestamps.
+- Converts timezone-aware timestamps to UTC.
+- Compares timestamps to determine event order.
+- Identifies whether two timestamps represent the same instant.
+- Calculates the time difference between events.
+
+### Exception Handling and Timestamp Validation (`exception_handling_test.py`)
+
+- Parses ISO 8601 timestamp strings.
+- Identifies timestamps with timezone information.
+- Detects timestamps missing timezone information.
+- Catches invalid timestamp formats using exception handling.
+- Records parsing errors and produces category counts.
+
+### Current Testing
+
+The exception-handling prototype has successfully distinguished three controlled test cases:
+
+- Timezone-aware timestamp.
+- Timestamp missing timezone information.
+- Invalid timestamp.
+
+These are initial prototypes, not a complete authentication-log parser or detection system.
+## 7. Evaluation Criteria
 
 Potential evaluation measures include:
 
@@ -86,7 +114,7 @@ Potential evaluation measures include:
 
 Final metrics and experimental methods will be selected after the literature review.
 
-## 7. Original Contribution
+## 8. Original Contribution
 
 No claim of originality has yet been established.
 
@@ -94,7 +122,7 @@ The project will investigate existing approaches and identify a defensible resea
 
 Potential contributions may include a new testing methodology, improved event-normalisation techniques, reliability measurements, or an independently developed analysis framework.
 
-## 8. Ethical and Research Standards
+## 9. Ethical and Research Standards
 
 - Use only authorised systems and datasets.
 - Preserve original evidence.
@@ -104,16 +132,16 @@ Potential contributions may include a new testing methodology, improved event-no
 - Publish limitations and reproducibility information.
 - Never expose credentials, private information, or confidential logs.
 
-## 9. Project Progress
+## 10. Project Progress
 
 | Stage | Status |
 |---|---|
-| Project definition | In progress |
+| Project definition | Complete |
 | Literature review | Not started |
 | Existing-tool evaluation | Not started |
 | Dataset design | Not started |
-| Prototype development | Not started |
-| Experimental testing | Not started |
+| Prototype development | In Progress |
+| Experimental testing | In Progress |
 | Results and analysis | Not started |
 | Independent review | Not started |
 | Publication | Not started |

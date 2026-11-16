@@ -69,9 +69,10 @@ The project will progress through controlled stages:
 
 All experiments will use synthetic data or authorised laboratory environments.
 
+
 ## 6. Initial Technical Implementation
 
-Two initial Python scripts have been developed:
+Initial Python prototypes have been developed to investigate timestamp handling, exception handling, and authentication log analysis.
 
 ### Timestamp Analysis (`timestamp_analysis.py`)
 
@@ -89,15 +90,49 @@ Two initial Python scripts have been developed:
 - Catches invalid timestamp formats using exception handling.
 - Records parsing errors and produces category counts.
 
-### Current Testing
+### Authentication Log Analysis (`datasets/authentication_log_analyzer.py`)
 
-The exception-handling prototype has successfully distinguished three controlled test cases:
+- Reads a synthetic Linux authentication log dataset.
+- Counts successful and failed SSH login attempts.
+- Extracts usernames and source IP addresses from the tested log formats.
+- Counts failed authentication attempts by username and source IP.
+- Generates an alert when an IP address reaches the configured failure threshold.
 
-- Timezone-aware timestamp.
-- Timestamp missing timezone information.
-- Invalid timestamp.
+### Synthetic Dataset (`datasets/authentication_sample.log`)
 
-These are initial prototypes, not a complete authentication-log parser or detection system.
+The initial dataset contains four controlled SSH authentication records:
+
+- One successful public-key login.
+- One failed attempt using an invalid username.
+- Two failed password attempts using a valid username.
+- Three failed attempts originating from the same example IP address.
+
+The dataset uses synthetic records and documentation-reserved IP addresses. It does not contain real authentication activity.
+
+### Initial Testing and Results
+
+The authentication log analyzer was tested against the synthetic dataset.
+
+Results confirmed that the prototype could:
+
+- Correctly count the four log records.
+- Identify one successful and three failed login attempts.
+- Count failed attempts by username and IP address.
+- Generate an alert when the configured threshold of three failures is reached.
+- Avoid generating an alert when the number of failures remained below the threshold.
+
+Detailed test procedures, results, and limitations are documented in `datasets/authentication_log_analyzer_results.md`.
+
+These implementations are early prototypes. They have not yet been validated against diverse real-world authentication log formats or large datasets. The current analyzer uses fixed field positions and an illustrative detection threshold.
+
+### Timestamp Validation Testing
+
+The exception-handling prototype successfully distinguished three controlled test cases:
+
+- A timezone-aware timestamp.
+- A timestamp missing timezone information.
+- An invalid timestamp.
+
 ## 7. Evaluation Criteria
 
 Potential evaluation measures include:

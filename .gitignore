@@ -218,3 +218,4 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+!07_Projects/01_Authentication_Log_Reliablity/datasets/authentication_sample.log

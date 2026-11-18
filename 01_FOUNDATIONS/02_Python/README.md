@@ -1,5 +1,4 @@
-
-# Python Programming
+# Python Development
 
 ## Purpose
 
@@ -50,9 +49,9 @@ The objective is to progress from fundamental programming concepts to independen
 
 ## Practical Development
 
-Learning will be reinforced through progressively challenging exercises and original projects.
+Learning is reinforced through progressively challenging exercises and original projects.
 
-Each practical record should explain:
+Each practical project should explain:
 
 - The problem being addressed.
 - The approach taken.
@@ -60,16 +59,47 @@ Each practical record should explain:
 - Testing and observed results.
 - Limitations and possible improvements.
 
+## Current Projects
+
+### Project Frank — Account Activity Investigation & Forensic Timeline
+
+**Status:** Functional educational prototype  
+**Language:** Python 3  
+**Location:** `PROJECT_FRANK/`
+
+Project Frank is a Python-based investigation prototype that examines synthetic account activity records, identifies missing expected information, and reconstructs chronological event timelines.
+
+**Implemented components:**
+- FR-001: Account Activity Investigation.
+- FR-002: Account Activity Timeline.
+
+**Demonstrated capabilities:**
+- Structured audit-log processing.
+- Timestamp parsing and chronological sorting.
+- Conditional data validation.
+- Missing-information detection.
+- Structured incident reporting.
+- Investigation limitations and evidence-based conclusions.
+
+[View Project Frank](PROJECT_FRANK/README.md)
+
 ## Development Standards
 
 Code should prioritise readability, reliability, appropriate error handling, and clear documentation.
 
 All security-related development and testing will take place in authorised environments.
 
+Projects should distinguish demonstrated functionality from proposed future improvements and document technical limitations honestly.
+
 ## Current Status
 
-Foundational Python study is being established. Progress, exercises, and projects will be documented as learning advances.
+Foundational Python study is underway, with practical cybersecurity development beginning alongside the learning process.
+
+Project Frank represents an initial application of Python fundamentals to a structured cybersecurity investigation scenario.
+
+Further exercises and projects will progressively introduce more advanced programming, automation, data processing, and security-analysis techniques.
 
 ---
 
 *Learn deliberately. Build responsibly. Improve continuously.*
+

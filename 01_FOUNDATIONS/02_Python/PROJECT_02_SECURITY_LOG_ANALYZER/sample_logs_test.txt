@@ -1,0 +1,14 @@
+
+2026-11-18 08:00:12 | user=alice | event=login_success | ip=192.0.2.10
+2026-11-18 08:02:45 | user=bob | event=login_failed | ip=192.0.2.20
+2026-11-18 08:03:11 | user=bob | event=login_failed | ip=192.0.2.20
+2026-11-18 08:03:39 | user=bob | event=login_failed | ip=192.0.2.20
+2026-11-18 08:05:02 | user=charlie | event=login_success | ip=192.0.2.30
+2026-11-18 08:07:18 | user=alice | event=login_failed | ip=192.0.2.40
+2026-11-18 08:08:01 | user=bob | event=login_success | ip=192.0.2.20
+2026-11-18 08:10:55 | user=david | event=login_failed | ip=192.0.2.50
+2026-11-18 08:11:22 | user=david | event=login_failed | ip=192.0.2.50
+2026-11-18 08:12:09 | user=charlie | event=login_success | ip=192.0.2.30
+2026-11-18 08:14:00 | user=alice | event=login_failed | ip=192.0.2.99
+2026-11-18 08:14:30 | user=bob | event=login_failed | ip=192.0.2.99
+2026-11-18 08:15:00 | user=charlie | event=login_failed | ip=192.0.2.99
